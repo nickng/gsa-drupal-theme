@@ -1,0 +1,19 @@
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  background: #efefef;
+}
+
+#main.container {
+  background: #fff;
+}
+
+footer {
+  margin: 0 10px;
+  background: #eee;
+  color: #626262;
+}
+
+span.label > a {
+  color: #fff;
+}

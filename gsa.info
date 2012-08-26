@@ -1,0 +1,78 @@
+screenshot  = screenshot.png
+name        = GSA Theme
+description = GSA Theme (Zen sub-theme).
+core        = 7.x
+base theme  = zen
+
+;
+; Defaults from zen
+;
+stylesheets[all][] = system.menus.css
+stylesheets[all][] = css/normalize.css
+stylesheets[all][] = css/wireframes.css
+stylesheets[all][] = css/layouts/responsive-sidebars.css
+stylesheets[all][] = css/page-backgrounds.css
+stylesheets[all][] = css/tabs.css
+stylesheets[all][] = css/pages.css
+stylesheets[all][] = css/blocks.css
+stylesheets[all][] = css/navigation.css
+stylesheets[all][] = css/views-styles.css
+stylesheets[all][] = css/nodes.css
+stylesheets[all][] = css/comments.css
+stylesheets[all][] = css/forms.css
+stylesheets[all][] = css/fields.css
+stylesheets[all][] = css/print.css
+
+;
+; Bootstrap and overrides
+;
+stylesheets[all][] = css/bootstrap.css
+stylesheets[all][] = css/bootstrap-responsive.css
+stylesheets[all][] = css/gsa.css
+
+;
+; Javascript
+;
+scripts[] = js/jquery.js
+scripts[] = js/bootstrap.js
+
+;
+; Regions
+;
+regions[header]         = Header
+regions[navigation]     = Navigation bar
+regions[highlighted]    = Featured content box
+regions[content]        = Content
+regions[footer]         = Footer
+regions[bottom]         = Page bottom
+; regions[help]           = Help
+; regions[sidebar_first]  = Left sidebar
+; regions[sidebar_second] = Right sidebar
+
+;
+; Required by zen
+;
+regions[page_top]       = Page top
+regions[page_bottom]    = Page bottom
+
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = favicon
+features[] = main_menu
+
+;
+; Settings
+;
+settings[zen_breadcrumb]           = yes
+settings[zen_breadcrumb_separator] = <i class='icon-chevron-right'></i>
+settings[zen_breadcrumb_home]      = 1
+settings[zen_breadcrumb_trailing]  = 1
+settings[zen_breadcrumb_title]     = 0
+settings[zen_skip_link_anchor]     = main-menu
+settings[zen_skip_link_text]       = Jump to navigation
+settings[zen_html5_respond_meta][] = respond
+settings[zen_html5_respond_meta][] = html5
+settings[zen_html5_respond_meta][] = meta
+settings[zen_rebuild_registry]     = 1
+settings[zen_wireframes]           = 0
