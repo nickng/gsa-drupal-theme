@@ -27,7 +27,7 @@
  */
 ?>
 <?php if ($content): ?>
-  <footer id="footer" class="<?php print $classes; ?> container well well-small">
+  <footer id="footer" class="<?php print $classes; ?> container well well-small span10 offset1">
     <small>
     <?php print $content; ?>
     </small>
