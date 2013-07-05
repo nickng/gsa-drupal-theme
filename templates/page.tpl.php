@@ -70,12 +70,13 @@
  */
 ?>
 
+<div id="page">
+
   <?php if ($main_menu): ?>
     <div class='navbar navbar-inverse navbar-fixed-top'>
       <div class='navbar-inner'>
-        <div class='container row-fluid'>
-         <div class='span10 offset1'>
-          <a href='http://imperialcollegeunion.org/gsa' title="Graduate Students' Association" class='brand' style='padding-top: 0; padding-bottom: 0;'><img src='/gsa/sites/all/themes/gsa/logo-bw.png' alt='GSA'/></a>
+        <div class='container'>
+          <a href='http://imperialcollegeunion.org/gsa' title="Graduate Students' Union" class='brand' style='padding-top: 0; padding-bottom: 0;'><img src='/gsa/sites/all/themes/gsu/logo-bw.png' alt='GSU'/></a>
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -102,59 +103,56 @@
             )); ?>
           </nav>
         </div>
-       </div>
       </div>
     </div>
   <?php endif; ?>
 
-<div id="page" class="row">
+  <div id="main" class="container">
 
-  <div id="main" class="span10 offset1">
+  <header id="header" role="banner" class="container">
 
-    <header id="header" role="banner" class="row-fluid">
+    <?php if ($logo): ?>
+      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
+    <?php endif; ?>
 
-      <?php if ($logo): ?>
-        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" /></a>
-      <?php endif; ?>
+    <?php if ($site_name || $site_slogan): ?>
+      <hgroup id="name-and-slogan" class='page-header'>
+        <?php if ($site_name): ?>
+          <h1 id="site-name">
+            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a><br/>
+        <?php endif; ?>
 
-      <?php if ($site_name || $site_slogan): ?>
-        <hgroup id="name-and-slogan" class='page-header'>
-          <?php if ($site_name): ?>
-            <h1 id="site-name">
-              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a><br/>
-          <?php endif; ?>
+        <?php if ($site_slogan): ?>
+          <small id="site-slogan"><?php print $site_slogan; ?></small>
+        <?php endif; ?>
 
-          <?php if ($site_slogan): ?>
-            <small id="site-slogan"><?php print $site_slogan; ?></small>
-          <?php endif; ?>
+        <?php if ($site_name): ?>
+          </h1>
+        <?php endif; ?>
+      </hgroup><!-- /#name-and-slogan -->
+    <?php endif; ?>
 
-          <?php if ($site_name): ?>
-            </h1>
-          <?php endif; ?>
-        </hgroup><!-- /#name-and-slogan -->
-      <?php endif; ?>
+    <?php if ($secondary_menu): ?>
+      <nav id="secondary-menu" role="navigation">
+        <?php print theme('links__system_secondary_menu', array(
+          'links' => $secondary_menu,
+          'attributes' => array(
+            'class' => array('links', 'inline', 'clearfix'),
+          ),
+          'heading' => array(
+            'text' => $secondary_menu_heading,
+            'level' => 'h2',
+            'class' => array('element-invisible'),
+          ),
+        )); ?>
+      </nav>
+    <?php endif; ?>
 
-      <?php if ($secondary_menu): ?>
-        <nav id="secondary-menu" role="navigation">
-          <?php print theme('links__system_secondary_menu', array(
-            'links' => $secondary_menu,
-            'attributes' => array(
-              'class' => array('links', 'inline', 'clearfix'),
-            ),
-            'heading' => array(
-              'text' => $secondary_menu_heading,
-              'level' => 'h2',
-              'class' => array('element-invisible'),
-            ),
-          )); ?>
-        </nav>
-      <?php endif; ?>
+    <?php print render($page['header']); ?>
 
-      <?php print render($page['header']); ?>
+  </header>
 
-    </header>
-
-    <div id="content" class="row-fluid" role="main">
+    <div id="content" class="column" role="main">
       <?php print render($page['highlighted']); ?>
       <?php print $breadcrumb; ?>
       <a id="main-content"></a>

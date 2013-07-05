@@ -225,7 +225,7 @@ function STARTERKIT_preprocess_block(&$variables, $hook) {
 }
 // */
 
-function gsa_field__field_tags__article($variables) {
+function gsu_field__field_tags__article($variables) {
   $output = '';
 
   if (!$variables['label_hidden']) {
@@ -246,7 +246,7 @@ function gsa_field__field_tags__article($variables) {
   return $output;
 }
 
-function gsa_field__body__article($variables) {
+function gsu_field__body__article($variables) {
   $output = '';
 
   // Render the label, if it's not hidden.
@@ -268,7 +268,7 @@ function gsa_field__body__article($variables) {
   return $output;
 }
 
-function gsa_preprocess_node(&$variables, $hook) {
+function gsu_preprocess_node(&$variables, $hook) {
   if (isset($variables['content']['links']['node']['#links']['node-readmore'])) {
     $variables['content']['links']['node']['#links']['node-readmore']['attributes']['class'] = 'btn';
   }

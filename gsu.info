@@ -1,6 +1,6 @@
 screenshot  = screenshot.png
-name        = GSA Theme
-description = GSA Theme (Zen sub-theme).
+name        = GSU Theme
+description = GSU Theme (Zen sub-theme).
 core        = 7.x
 base theme  = zen
 
@@ -28,7 +28,7 @@ stylesheets[all][] = css/print.css
 ;
 stylesheets[all][] = css/bootstrap.css
 stylesheets[all][] = css/bootstrap-responsive.css
-stylesheets[all][] = css/gsa.css
+stylesheets[all][] = css/gsu.css
 
 ;
 ; Javascript
